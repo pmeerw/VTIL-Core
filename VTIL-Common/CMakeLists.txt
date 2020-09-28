@@ -42,7 +42,6 @@ if(CMAKE_CXX_COMPILER_ID MATCHES "Clang|GNU")
 
     # GCC-only flags
     if(CMAKE_CXX_COMPILER_ID MATCHES "GNU")
-        target_compile_options(${PROJECT_NAME} PUBLIC -Wvolatile)
         target_compile_options(${PROJECT_NAME} PUBLIC -fpermissive)
         target_compile_options(${PROJECT_NAME} PUBLIC -Wno-attributes)
         target_compile_options(${PROJECT_NAME} PUBLIC -Wno-multichar)
