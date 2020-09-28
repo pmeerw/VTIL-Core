@@ -1,5 +1,5 @@
 
-Copyright (c) 2020, Can Bölük
+Copyright (c) 2020, Can Bölük and contributors of the VTIL Project
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
