@@ -661,10 +661,10 @@ namespace vtil
 		const void* data = cdata();
 		const void* data_limit = ( char* ) cdata() + size();
 		auto dos_header = ( const dos_header_t* ) cdata();
-		
+
 		// Validate DOS header.
 		//
-		if ( dos_header->e_magic != DOS_HDR_MAGIC ) 
+		if ( size() < sizeof(dos_header) || dos_header->e_magic != DOS_HDR_MAGIC )
 			return false;
 
 		// Validate image size.
