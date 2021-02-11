@@ -106,6 +106,22 @@ namespace vtil
 
 #pragma pack(pop)
 
+	// Implement the interface requirements:
+	//
+	size_t elf_image::get_section_count() const
+	{
+		// Get the section count from file header.
+		//
+        return 0;
+	}
+
+	section_descriptor elf_image::get_section( size_t index ) const
+	{
+		return {
+		};
+	}
+
+
 	bool elf_image::is_elf64() const
 	{
         if ( !is_valid() )
@@ -164,19 +180,4 @@ namespace vtil
 		return true;
 	}
 	
-	void elf_image::flush()
-	{
-	}
-
-	void elf_image::add_section( section_descriptor& in_out, const void* data, size_t size )
-	{
-	}
-
-	void elf_image::enum_relocations( const function_view<bool( const relocation_descriptor& )>& fn ) const
-	{
-	}
-
-	void elf_image::delete_relocation( const relocation_descriptor& desc )
-	{
-	}
 };
