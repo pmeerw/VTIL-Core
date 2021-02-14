@@ -51,6 +51,10 @@ namespace vtil
 		//
 		virtual size_t get_section_count() const override;
 		virtual section_descriptor get_section( size_t index ) const override;
+		virtual void modify_section( size_t index, const section_descriptor& desc ) override;
+		virtual uint64_t next_free_rva() const override;
+		virtual void add_section( section_descriptor& in_out, const void* data, size_t size ) override;
+		virtual void enum_relocations( const function_view<bool( const relocation_descriptor& )>& fn ) const override;
 		virtual uint64_t get_image_base() const override;
 		virtual size_t get_image_size() const override;
 		virtual bool has_relocations() const override;

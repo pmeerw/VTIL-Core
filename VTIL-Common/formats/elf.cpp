@@ -27,7 +27,7 @@
 //
 #include "elf.hpp"
 #include "../io/asserts.hpp"
-#include <string.h>
+#include <cstring>
 #include "../math/bitwise.hpp"
 
 namespace vtil
@@ -121,6 +121,22 @@ namespace vtil
 		};
 	}
 
+	void elf_image::modify_section( size_t index, const section_descriptor& desc )
+	{
+	}
+
+	uint64_t elf_image::next_free_rva() const
+	{
+        return 0;
+	}
+
+	void elf_image::add_section( section_descriptor& in_out, const void* data, size_t size )
+	{
+    }
+
+	void elf_image::enum_relocations( const function_view<bool( const relocation_descriptor& )>& fn ) const
+	{
+    }
 
 	bool elf_image::is_elf64() const
 	{
