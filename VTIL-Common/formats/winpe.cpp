@@ -27,7 +27,7 @@
 //
 #include "winpe.hpp"
 #include "../io/asserts.hpp"
-#include <string.h>
+#include <cstring>
 #include "../math/bitwise.hpp"
 
 namespace vtil
